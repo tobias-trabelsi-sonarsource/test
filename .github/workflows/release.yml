@@ -36,4 +36,7 @@ jobs:
         run: |
           git checkout gh-pages
           echo "test ${{ github.event.inputs.version }}" >> index.html
+          git add index.html
+          git commit --message "Update index"
+          git push
 
